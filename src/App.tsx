@@ -20,23 +20,42 @@ import {
 import { useRef } from "react";
 import { QRCodeSVG } from "qrcode.react";
 
-const SectionHeader = ({ title, subtitle, number }: { title: string; subtitle?: string; number: string }) => (
-  <motion.div 
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    className="mb-16"
-  >
-    <div className="flex items-center gap-4 mb-2 text-brand-primary">
-      <span className="font-display font-bold text-xl">{number}</span>
-      <div className="h-[1px] w-12 bg-brand-primary opacity-50" />
-    </div>
-    <h2 className="text-4xl md:text-5xl font-display font-bold mb-4 tracking-tight">
-      {title}
-    </h2>
-    {subtitle && <p className="text-gray-400 max-w-2xl text-lg">{subtitle}</p>}
-  </motion.div>
-);
+const SectionHeader = ({ 
+  title, 
+  subtitle, 
+  number, 
+  centered = false,
+  variant = 'default'
+}: { 
+  title: string; 
+  subtitle?: string; 
+  number: string; 
+  centered?: boolean;
+  variant?: 'default' | 'primary';
+}) => {
+  const isPrimary = variant === 'primary';
+  return (
+    <motion.div 
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      className={`mb-16 ${centered ? 'flex flex-col items-center text-center' : ''}`}
+    >
+      <div className={`flex items-center gap-4 mb-2 ${isPrimary ? 'text-white' : 'text-brand-primary'} ${centered ? 'justify-center' : ''}`}>
+        <span className="font-display font-bold text-xl">{number}</span>
+        <div className={`h-[1px] w-12 ${isPrimary ? 'bg-white' : 'bg-brand-primary'} opacity-50`} />
+      </div>
+      <h2 className="text-4xl md:text-5xl font-display font-bold mb-4 tracking-tight">
+        {title}
+      </h2>
+      {subtitle && (
+        <p className={`${isPrimary ? 'text-white/80' : 'text-gray-400'} max-w-2xl text-lg ${centered ? 'mx-auto' : ''}`}>
+          {subtitle}
+        </p>
+      )}
+    </motion.div>
+  );
+};
 
 export default function App() {
   const containerRef = useRef(null);
@@ -274,6 +293,8 @@ export default function App() {
             number="03" 
             title="Głośne liczby" 
             subtitle="Skala problemu jest przerażająca. Statystyki pokazują, że nikt nie jest bezpieczny."
+            centered={true}
+            variant="primary"
           />
           
           <div className="grid md:grid-cols-3 gap-12 mt-16">
@@ -490,6 +511,7 @@ export default function App() {
             number="07" 
             title="Potrzebujesz pomocy?" 
             subtitle="Nie jesteś sam w tej walce. Istnieją profesjonaliści, którzy wiedzą, jak Ci pomóc." 
+            centered={true}
           />
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
