@@ -52,7 +52,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <ShieldAlert className="w-8 h-8 text-brand-primary" />
-            <span className="font-display font-bold text-xl tracking-tighter">BEZPIECZNISIECI</span>
+            <span className="font-display font-bold text-xl tracking-tighter text-glow">BEZPIECZNI W SIECI</span>
           </div>
           <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
             <a href="#co-to-jest" className="hover:text-brand-primary transition-colors">Definicja</a>
@@ -63,12 +63,12 @@ export default function App() {
             <a href="#ankieta" className="hover:text-brand-primary transition-colors">Ankieta</a>
             <a href="#pomoc" className="px-5 py-2 bg-brand-primary/10 text-brand-primary rounded-full hover:bg-brand-primary hover:text-white transition-all">Pomoc</a>
             
-            <div className="flex items-center gap-4 ml-4 pl-4 border-l border-white/10">
-              <a href="https://www.instagram.com/cyberprzemoc.info/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-brand-primary transition-colors">
-                <Instagram size={20} />
+            <div className="flex items-center gap-6 ml-4 pl-6 border-l border-white/10">
+              <a href="https://www.instagram.com/cyberprzemoc.info/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-brand-primary transition-all hover:scale-125 drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]">
+                <Instagram size={32} />
               </a>
-              <a href="https://www.facebook.com/profile.php?id=61589081975378" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-brand-primary transition-colors">
-                <Facebook size={20} />
+              <a href="https://www.facebook.com/profile.php?id=61589081975378" target="_blank" rel="noopener noreferrer" className="text-white hover:text-brand-primary transition-all hover:scale-125 drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]">
+                <Facebook size={32} />
               </a>
             </div>
           </div>
@@ -94,11 +94,11 @@ export default function App() {
             <span className="inline-block px-4 py-1.5 rounded-full bg-brand-primary/10 text-brand-primary text-xs font-bold uppercase tracking-widest mb-6 border border-brand-primary/20">
               Projekt Studencki
             </span>
-            <h1 className="text-6xl md:text-8xl font-display font-bold mb-8 tracking-tighter leading-[0.9] text-glow px-4">
-              CYBERPRZEMOC
-              <span className="block text-2xl md:text-4xl mt-4 font-light tracking-normal text-gray-400 uppercase">Zrozumieć • Zauważyć • Reagować</span>
+            <h1 className="text-4xl md:text-6xl font-display font-bold mb-8 tracking-tighter leading-tight text-glow px-4">
+              Wzrost świadomości społecznej w zakresie cyberprzemocy wśród młodzieży
             </h1>
             <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-10 leading-relaxed font-light">
+              <span className="text-white font-medium block mb-2">Zrozumieć • Zauważyć • Reagować</span>
               Cyberprzemoc to nie tylko słowa na ekranie. To realne zagrożenie, które dotyka miliony młodych ludzi. Dowiedz się, jak rozpoznać zagrożenie i skutecznie mu przeciwdziałać.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -346,13 +346,13 @@ export default function App() {
         </div>
       </section>
 
-      {/* Creators Section */}
-      <section id="tworcy" className="py-32">
+      {/* Team Section */}
+      <section id="tworcy" className="py-32 bg-brand-bg">
         <div className="max-w-7xl mx-auto px-6">
           <SectionHeader 
             number="05" 
             title="Zespół projektowy" 
-            subtitle="Poznaj twórców inicjatywy 'Cyberprzemoc - Zrozumieć, Zauważyć, Reagować'. Jesteśmy studentkami, którym nie jest obojętny los drugiego człowieka w cyfrowej przestrzeni." 
+            subtitle="Poznaj twórców inicjatywy. Jesteśmy studentkami, którym nie jest obojętny los drugiego człowieka w cyfrowej przestrzeni." 
           />
 
           <div className="grid md:grid-cols-2 gap-8 mt-12">
@@ -368,9 +368,9 @@ export default function App() {
                 </div>
                 <div>
                   <span className="text-brand-primary font-bold text-xs uppercase tracking-widest block mb-1">Twórczyni</span>
-                  <h4 className="text-3xl font-display font-bold mb-3">Magda Stankiewicz</h4>
+                  <h4 className="text-3xl font-display font-bold mb-3">Magdalena Stankiewicz</h4>
                   <p className="text-gray-400 font-light leading-relaxed text-sm">
-                    Studentka pasjonująca się psychologią mediów i bezpieczeństwem cyfrowym. Autorka raportu o cyberprzemocy, której celem jest budowanie empatii i zrozumienia w internecie. Wierzy, że edukacja to najskuteczniejsze narzędzie w walce z hejtem.
+                    Studentka Kryminologii i Kryminalistyki interesująca się problemem cyberprzemocy oraz wpływem internetu na młodzież. W projekcie odpowiada za cele informacyjne i świadomościowe.
                   </p>
                 </div>
               </div>
@@ -388,10 +388,10 @@ export default function App() {
                    <Lock size={60} className="text-blue-500 opacity-20" />
                 </div>
                 <div>
-                  <span className="text-blue-500 font-bold text-xs uppercase tracking-widest block mb-1">Współtwórczyni & Strateg Komunikacji</span>
-                  <h4 className="text-3xl font-display font-bold mb-3">Dominika Kubicz</h4>
+                  <span className="text-blue-500 font-bold text-xs uppercase tracking-widest block mb-1">Twórczyni</span>
+                  <h4 className="text-3xl font-display font-bold mb-3">Dominika Kubiczek</h4>
                   <p className="text-gray-400 font-light leading-relaxed text-sm">
-                    Studentka zafascynowana wpływem technologii na relacje międzyludzkie. W projekcie odpowiada za strategię komunikacji w mediach społecznościowych oraz merytoryczne opracowanie treści edukacyjnych. Dąży do tego, by sieć była miejscem wsparcia, a nie wykluczenia.
+                    Studentka Kryminologii i Kryminalistyki zainteresowana bezpieczeństwem w sieci oraz tematyką cyberprzemocy wśród młodych osób. W projekcie odpowiada za cele edukacyjne i profilaktyczne.
                   </p>
                 </div>
               </div>
@@ -479,13 +479,13 @@ export default function App() {
             subtitle="Nie jesteś sam w tej walce. Istnieją profesjonaliści, którzy wiedzą, jak Ci pomóc." 
           />
 
-          <div className="grid md:grid-cols-2 gap-8 mt-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
             <div className="p-10 glass rounded-[2rem] border-white/10 hover:border-brand-primary/50 transition-all flex flex-col items-center">
               <div className="w-20 h-20 bg-brand-primary text-white rounded-3xl flex items-center justify-center mb-8 shadow-lg">
                 <PhoneCall size={40} />
               </div>
               <h4 className="text-3xl font-display font-bold mb-4">116 111</h4>
-              <p className="text-gray-400 mb-8 max-w-sm">Telefon Zaufania dla Dzieci i Młodzieży. Bezpłatny i anonimowy, czynny 24/7.</p>
+              <p className="text-gray-400 mb-8 max-w-sm h-12">Telefon Zaufania dla Dzieci i Młodzieży. Bezpłatny i anonimowy, czynny 24/7.</p>
               <a href="tel:116111" className="w-full py-4 bg-brand-primary rounded-full font-bold hover:bg-orange-600 transition-all">Zadzwoń teraz</a>
             </div>
 
@@ -494,9 +494,45 @@ export default function App() {
                 <ShieldCheck size={40} />
               </div>
               <h4 className="text-3xl font-display font-bold mb-4">Dyżurnet.pl</h4>
-              <p className="text-gray-400 mb-8 max-w-sm">Polski punkt kontaktowy zgłaszający nielegalne treści w internecie.</p>
-              <a href="https://dyzurnet.pl" target="_blank" className="w-full py-4 bg-blue-600 rounded-full font-bold hover:bg-blue-700 transition-all">Zgłoś incydent</a>
+              <p className="text-gray-400 mb-8 max-w-sm h-12">Polski punkt kontaktowy zgłaszający nielegalne treści w internecie.</p>
+              <a href="https://dyzurnet.pl" target="_blank" rel="noopener noreferrer" className="w-full py-4 bg-blue-600 rounded-full font-bold hover:bg-blue-700 transition-all">Zgłoś incydent</a>
             </div>
+
+            <div className="p-10 glass rounded-[2rem] border-white/10 hover:border-red-500/50 transition-all flex flex-col items-center lg:col-span-1 md:col-span-2">
+              <div className="w-20 h-20 bg-red-600 text-white rounded-3xl flex items-center justify-center mb-8 shadow-lg">
+                <ShieldAlert size={40} />
+              </div>
+              <h4 className="text-3xl font-display font-bold mb-4">112 / 997</h4>
+              <p className="text-gray-400 mb-8 max-w-sm h-12">Policja. W sytuacjach bezpośredniego zagrożenia życia lub zdrowia.</p>
+              <a href="tel:112" className="w-full py-4 bg-red-600 rounded-full font-bold hover:bg-red-700 transition-all">Zadzwoń na Policję</a>
+            </div>
+          </div>
+
+          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <a 
+              href="https://incydent.cert.pl" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="p-6 glass rounded-2xl border-white/10 hover:border-brand-primary/30 transition-all flex items-center justify-between group"
+            >
+              <div className="text-left">
+                <h5 className="font-bold text-white group-hover:text-brand-primary transition-colors">CERT Polska</h5>
+                <p className="text-sm text-gray-400">Zgłoś incydent bezpieczeństwa</p>
+              </div>
+              <ExternalLink size={20} className="text-gray-500 group-hover:text-brand-primary" />
+            </a>
+            <a 
+              href="https://stophate.net" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="p-6 glass rounded-2xl border-white/10 hover:border-brand-primary/30 transition-all flex items-center justify-between group"
+            >
+              <div className="text-left">
+                <h5 className="font-bold text-white group-hover:text-brand-primary transition-colors">Stop Hate</h5>
+                <p className="text-sm text-gray-400">Wsparcie w walce z hejtem</p>
+              </div>
+              <ExternalLink size={20} className="text-gray-500 group-hover:text-brand-primary" />
+            </a>
           </div>
         </div>
       </section>
@@ -507,7 +543,7 @@ export default function App() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <ShieldAlert className="w-6 h-6 text-brand-primary" />
-              <span className="font-display font-bold text-lg">BEZPIECZNISIECI</span>
+              <span className="font-display font-bold text-lg">BEZPIECZNI W SIECI</span>
             </div>
             <p className="text-gray-500 text-sm">© 2026 Projekt Studencki. Twój głos ma znaczenie.</p>
           </div>
