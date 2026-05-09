@@ -50,10 +50,23 @@ export default function App() {
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 border-b border-white/5 bg-brand-bg/80 backdrop-blur-xl">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <ShieldAlert className="w-8 h-8 text-brand-primary" />
-            <span className="font-display font-bold text-xl tracking-tighter text-glow">BEZPIECZNI W SIECI</span>
+          <div className="flex items-center justify-between w-full md:w-auto">
+            <div className="flex items-center gap-2">
+              <ShieldAlert className="w-8 h-8 text-brand-primary" />
+              <span className="font-display font-bold text-xl tracking-tighter text-glow">BEZPIECZNI W SIECI</span>
+            </div>
+            
+            {/* Mobile Social Icons */}
+            <div className="flex md:hidden items-center gap-4">
+              <a href="https://www.instagram.com/cyberprzemoc.info/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-brand-primary transition-all">
+                <Instagram size={24} />
+              </a>
+              <a href="https://www.facebook.com/profile.php?id=61589081975378" target="_blank" rel="noopener noreferrer" className="text-white hover:text-brand-primary transition-all">
+                <Facebook size={24} />
+              </a>
+            </div>
           </div>
+
           <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
             <a href="#co-to-jest" className="hover:text-brand-primary transition-colors">Definicja</a>
             <a href="#rodzaje" className="hover:text-brand-primary transition-colors">Rodzaje</a>
@@ -540,12 +553,22 @@ export default function App() {
       {/* Footer */}
       <footer className="py-20 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-10">
-          <div>
+          <div className="flex flex-col items-center md:items-start">
             <div className="flex items-center gap-2 mb-4">
               <ShieldAlert className="w-6 h-6 text-brand-primary" />
-              <span className="font-display font-bold text-lg">BEZPIECZNI W SIECI</span>
+              <span className="font-display font-bold text-lg text-glow">BEZPIECZNI W SIECI</span>
             </div>
-            <p className="text-gray-500 text-sm">© 2026 Projekt Studencki. Twój głos ma znaczenie.</p>
+            <p className="text-gray-500 text-sm mb-6">© 2026 Projekt Studencki. Twój głos ma znaczenie.</p>
+            
+            {/* Footer Social Icons for Mobile/Desktop */}
+            <div className="flex items-center gap-6">
+              <a href="https://www.instagram.com/cyberprzemoc.info/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-brand-primary transition-all hover:scale-110">
+                <Instagram size={24} />
+              </a>
+              <a href="https://www.facebook.com/profile.php?id=61589081975378" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-brand-primary transition-all hover:scale-110">
+                <Facebook size={24} />
+              </a>
+            </div>
           </div>
           <div className="flex gap-8 text-sm text-gray-400">
             <a href="#" className="hover:text-brand-primary transition-colors">Polityka prywatności</a>
